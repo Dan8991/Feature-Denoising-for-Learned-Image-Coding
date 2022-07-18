@@ -1,0 +1,44 @@
+epochs:
+  value: 10
+  desc: "Number of epochs"
+n_reps:
+  value: 1000
+  desc: "Parameter used when the batch size is -1 i.e. when the whole dataset\ 
+          is contained in one batch, this specifies the number of batch\
+          iterations in one epoch"
+qp:
+  value: -1
+  desc: "Quality/Quantization parameter for the desired codec, this depends\
+         on the codec parameter, It can be a range and in order to specify\
+         it just write a string of 3 comma separated integers \
+         q_start, q_end, step (eg 5, 40, 5) "
+lr:
+  value: 0.000001
+  desc: "Learning rate"
+decay_rate:
+  value: 0.3
+  desc: "Decay value used when the loss doesn't decrease for 3 epochs"
+batch_size:
+  value: 1
+  desc: "batch size, if -1 the whole dataset is inserted in one batch"
+codec:
+  value: FP
+  desc: "Codec used for the optimization can be one among: \n
+    \t * Cheng2020: implements the anchor model variant of Cheng 2020 \n
+    \t * JAHP: implements the Joint Autoregressive Hierarchical Prior Model"
+image_id:
+  value: -1
+  desc: "Chooses the image id in the kodak dataset, if -1 then all the images\
+         are processed"
+dataset:
+  value: kodak
+  desc: "Dataset used for evaluation can be either clic or kodak"
+input_path:
+  value: null
+  desc: "path to the image to encode (can be used only with codec.py)"
+compressed_path:
+  value: null
+  desc: "path to the binary string (can be used only with codec.py)"
+output_path:
+  value: null
+  desc: "path to the reconstructed image (can be used only with codec.py)"

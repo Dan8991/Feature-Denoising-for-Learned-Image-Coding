@@ -1,0 +1,17 @@
+name: FeatureOptimization
+channels:
+dependencies:
+   - python=3.9
+   - pytorch::pytorch
+   - pytorch::torchvision
+   - cudatoolkit=11.3
+   - matplotlib
+   - numpy
+   - pip
+   - conda-forge::wandb
+   - scikit-image
+   - conda-forge::av
+   - pip:
+     - opencv-python
+     - tqdm
+     - compressai
